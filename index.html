@@ -5,23 +5,77 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./css/styles.css">
-   <title>Serendipity</title>
    <meta name="author" content="Abril Rodriguez">
-   <meta name="description" content="Descubre regalos elegantes y artesanales en Serindipity. Encuentra kits de bienestar, perfumería de lujo y más para sorprender a tus seres queridos o darte un capricho.">
+   <meta name="description"
+      content="Descubre regalos elegantes y artesanales en Serindipity. Encuentra kits de bienestar, perfumería de lujo y más para sorprender a tus seres queridos o darte un capricho.">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap"
+      rel="stylesheet">
+   <link rel="icon" href="./img/S.png" type="image/png">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      
+   <title>Serendipity</title>
 </head>
 
 <body>
    <header>
-
+      <section class="top-left">
+         <div class="logo">
+            <img src="./img/Serindi__1_-removebg-preview.png" alt="logo Serindipity">
+         </div>
+         <div class="navbar">
+            <nav>
+               <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Productos</a></li>
+                  <li><a href="#">Contacto</a></li>
+               </ul>
+            </nav>
+         </div>
+         <span><i class="fa-solid fa-cart-shopping"></i></span>
+         <div class="dropdown">
+            <ul>
+               <li><a class="dropdown-item" href="#">Home</a></li>
+               <li><a class="dropdown-item" href="#">Productos</a></li>
+               <li><a class="dropdown-item" href="#">Contacto</a></li>
+            </ul>
+         </div>
+      </section>
+      <section class="banner">
+         <h1>Serindipity</h1>
+         <h2>Un toque de encanto en cada regalo</h2>
+      </section>
    </header>
 
    <main>
-
+      
    </main>
 
    <footer>
-
+      <div class="logo">
+         <img src="./img/Serindi (1).png" alt="logo Serindipity">
+      </div>
+      <div class="contact">
+         <h4>Contacto</h4>
+         <form action="https://formsubmit.co/rodriguezabbril9@gmail.com" method="POST">
+            <label for="mensaje">Escríbanos</label>
+            <input type="text" name="mensaje" placeholder="Consulte aquí" id="mensaje" maxlength="200">
+         </form>
+      </div>
+      <div class="social-media">
+         <span><i class="fa-brands fa-instagram"></i> instagram </span>
+         <span><i class="fa-brands fa-youtube"></i> youtube</span>
+         <span><i class="fa-brands fa-facebook"></i> facebook</span>
+         <span><i class="fa-brands fa-whatsapp"></i> whatsapp</span>
+      </div>
+      <hr>
    </footer>
+   <script src="./script.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="https://kit.fontawesome.com/77d64e6775.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
