@@ -1,14 +1,8 @@
 *, *::before, *::after {
-    font-family: 'Crimson Text', serif;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-family: 'Nanum Myeongjo', serif;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-
-a { text-decoration: none; }
-li { list-style: none; }
 
 :root {
     --white: #ffffff;
@@ -19,31 +13,166 @@ li { list-style: none; }
     --black: #000000;
 
     --transition-timing: 0.2s ease;
+
+    --fuente-otra-serif: 'Crimson Text', serif;
+    --fuente-texto-sans-serif: 'Nanum Gothic', sans-serif;
+    --fuente-titulos-serif: 'Nanum Myeongjo', serif;
 }
+
+/* predeterminado */
+
+a { 
+    text-decoration: none;
+    color: #000000; 
+}
+
+li { list-style: none; }
+
+h1, h3, h5 {
+    font-family: var(--fuente-titulos-serif);
+}
+
+h2, p, span, input::placeholder, h4 {
+    font-family: var(--fuente-texto-sans-serif);
+}
+
+/* header */
 
 header {
     background-image: url("/img/encabezado.jpg");
     background-repeat: no-repeat;
-    background-size: 100% 190px;
+    background-size: 100% 160px;
 }
 
 header .top-left {
     display: flex;
+    align-items: center;
+    justify-content:space-between;
 }
 
-header > section > .logo img {
+.logo img {
     width: 5rem;
 }
 
-.top-left .navbar nav > ul {
-    display: flex;
-    list-style: none;
+.navbar {
+    display: none;
 }
 
-/* ver menu hamburguesa desde js  */
+nav {
+    display: flex;
+}
 
-.top-left .navbar nav > ul a {
-    color: #000000;
+.icons {
+    display: flex;
+    cursor: pointer;
+    color: #ffffff;
+    align-items: center;
+}
+
+.icons i, .icons span {
+    padding: 0 .5rem;
+}
+
+.banner {
+    text-align: center;
+    color: var(--white);
+    padding: 2.2rem;
+}
+
+.banner h1 {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    display: none;
+}
+
+/* main  */
+
+.about {
+    background-color: var(--beige);
+    text-align: center;
+    padding: 1.25rem 0;
+}
+
+.about h2 {
+    font-family: var(--fuente-titulos-serif);
+    font-size: 1.5rem;
+}
+
+.about .contenido {
+    padding: 1rem 1.5rem;
+}
+
+.about .contenido h3 {
+    padding-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+/* footer */
+footer {
+    background-color: var(--dark-brown);
+    color: var(--white);
+    text-align: center;
+}
+
+footer div {
+    padding: 1rem 0;
+}
+
+.contact h4 {
+    font-family: var(--fuente-texto-sans-serif);
+    font-size: 0.9rem;
+    padding: 0 1rem 1rem 1rem;
+    font-weight: 500;
+}
+
+form {
+    background-color: var(--white);
+    border-radius: 96px;
+    border: var(--black);
+    display: flex;
+    margin: 1rem;
+    width: 90%;
+}
+
+form input {
+    height: 2rem;
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 9px 12px 9px 18px;
+    box-shadow: none;
+    transition: border 200ms ease-out, background 200ms ease-out;
+    border-color: rgba(14,14,14,.1803921569);
+    border-style: solid;
+    border-width: 1px;
+    border-right: 0;
+}
+
+form .subscribe {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    height: 2rem;
+    text-align: center;
+    margin: auto;
+    transition: var(--transition-timing);
+    font-family: var(--fuente-texto-sans-serif);
+    border: 1px solid rgba(14,14,14,.1803921569);
+    cursor: pointer;
+    transition: border 200ms ease-out,color 200ms ease-out;
+    outline: none;
+    background: none;
+    border-left: 0;
+    width: 90%;
+}
+
+form .subscribe:hover, form .subscribe:active{
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /* responsive mobile first */
@@ -51,14 +180,68 @@ header > section > .logo img {
     /* 320px */
 
 @media screen and (min-width:320px) {
-    
-}    
+
+}
+
+@media screen and (min-width:550px) {
+
+    footer {
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    .contact h4 {
+        padding: 0;
+    }
+
+    form .subscribe {
+        width: 50%;
+    }
+}
 
     /* 768px */
 
 @media screen and (min-width:768px) {
     header {
+        background-size: 100%;
+    }
+
+    .banner {
+        margin-top: 2rem;
+    }
+
+    .subtitle {
+        display: block;
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+}
+
+@media screen and (min-width:1100px) {
+
+    header {
         background-size: cover;
     }
 
+    .banner {
+        margin-top: 6.5rem;
+    }
+
+    .banner h1 {
+        font-size: 3.5rem;
+    }
+
+    .banner h2 {
+        font-size: 1.5rem;
+    }
+
+    .about {
+        padding: 1rem;
+    }
+
+    .about-container {
+        display: flex;
+    }
 }

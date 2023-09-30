@@ -1,62 +1,126 @@
 {
-  "producto1": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
+    "boxesPrincip": {
+        "producto1": {
+            "name": "Serenidad en Casa - Box Comfy",
+            "price": 7200,
+            "includes": "Vela aromatizante pequeña, taza, medias blancas, te y café",
+            "description": "Este box de serenidad en casa está diseñado para crear un ambiente relajante en tu hogar. Perfecto para momentos de tranquilidad y bienestar.",
+            "id": 1,
+            "image": "./img/productos/box comfy.jpg",
+            "opciones": false
+        },
+    
+        "producto2": {
+            "name": "Merienda tranquila - Box merienda/desayuno",
+            "price": 6300,
+            "includes": "Taza de cerámica, vela aromatizante, toalla a modo de individual, cuchara, caramelos de dulce de leche y galletitas caseras",
+            "description": "Disfruta de una merienda tranquila o un delicioso desayuno con este box. Ideal para tomar un descanso y recargar energías.",
+            "id": "2",
+            "image": "./img/productos/box merienda.jpg",
+            "opciones": false
+        },
+    
+        "producto3": {
+            "name": "Ritual de Baño Tranquilidad - Box baño relajante",
+            "price": 4800,
+            "includes": "Jabón natural y artesanal, sales de baño, toalla suave, vela aromática y aplicador de exfoliante",
+            "description": "Sumérgete en un ritual de baño relajante con este box. Perfecto para cuidarte y desconectar del estrés.",
+            "id": "3",
+            "image": "./img/productos/box baño relajante.jpg",
+            "opciones": false
+        },
+    
+        "producto4": {
+            "name": "Noche de Serendipia - Box Noche de relax",
+            "price": 8000,
+            "includes": "Par de pantuflas suaves, manta fina y mascarilla facial",
+            "description": " Prepárate para una noche de relax y serenidad con este box. Ideal para disfrutar de un merecido descanso nocturno.",
+            "id": "4",
+            "image": "./img/productos/box noche en paz.jpg",
+            "opciones": false
+        },
+    
+        "producto5": {
+            "name": "Sumérgete en la calma - Box baño relajante",
+            "price": 4800,
+            "includes": "Crema humectante corporal, jabón natural, esponja exfoliante y bomba de baño.",
+            "description": "Este box de baño relajante te invita a sumergirte en la calma y cuidar tu cuerpo y mente.",
+            "id": "5",
+            "image": "./img/productos/box baño relajante 2.jpg",
+            "opciones": false
+        },
+        "producto6": {
+            "name": "Elegancia Sutil - Box Accesorios",
+            "price": 4000,
+            "includes": "Par de aritos, scrunchie, figura de arcilla, plato para guardar aritos, lapicera y un collar",
+            "description": "Descubre la elegancia en los detalles con este box de accesorios. Perfecto para realzar tu estilo con sutileza.",
+            "id": "6",
+            "image": "./img/productos/box accesories.jpg",
+            "opciones": false
+        },
+        "producto7": {
+            "name": "Secretos de Belleza Natural - Box Skincare",
+            "price": 5400,
+            "includes": "Aceite esencial, crema humectante de labios, aceite de baño, scrunchie, crema facial humectante, jabones artesanales suaves",
+            "description": "Revela los secretos de la belleza natural con este box de cuidado de la piel. Ideal para una rutina de belleza rejuvenecedora.",
+            "id": "7",
+            "image": "./img/productos/box skincare.jpg",
+            "opciones": false
+        },
+        "producto8": {
+            "name": "Serendipia Festiva - Box Navideña",
+            "price": 15000,
+            "includes": "Adorno navideño, galletita de jengibre, vela con aroma a pino, botella de champagne pequeña",
+            "description": "Celebra la temporada festiva con este box navideño lleno de sorpresas y alegría.",
+            "id": "8",
+            "image": "./img/productos/box navideña.jpg",
+            "opciones": false
+        }
+    },
 
-  "producto2": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-
-  "producto3": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-
-  "producto4": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-
-  "producto5": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-  "producto6": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-  "producto7": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  },
-  "producto8": {
-    "name": "",
-    "price": 23,
-    "includes": "",
-    "description": "",
-    "id": ""
-  }
+    "productos": {
+        "indv1": {
+            "name": "Momento de bienestar - Kit de Baño",
+            "price": 6000,
+            "includes": "Botella de sales de baño y 3 bombas de baño aromáticas",
+            "description": "Disfruta de un momento de bienestar y relajación en tu baño con este kit.",
+            "id": "in1",
+            "image": "./img/productos/kit de baño.jpg",
+            "opciones": false
+        },
+        "indv2": {
+            "name": "Pureza en Barra - Jabones Naturales",
+            "price": 1500,
+            "includes": "1 jabón natural a elección, portajabón y toalla",
+            "description": "Experimenta la pureza y frescura con estos jabones naturales hechos a mano.",
+            "id": "in2",
+            "image": "./img/productos/jabones naturales.jpg",
+            "opciones": true,
+            "opcionesDisponibles": ["Vainilla", "Lavanda", "Limón"]
+        },
+        "indv3": {
+            "name": "Luces Serenas - Velas Aromatizantes",
+            "price": 1800,
+            "includes": "Vela aromática a elección",
+            "description": "Crea un ambiente sereno y aromático con estas velas aromatizantes.",
+            "id": "in3",
+            "image": "./img/productos/velas aromatizantes.jpg",
+            "opciones": true,
+            "opcionesDisponibles": ["Vainilla y canela", "Mango y coco", "Rosa y jazmín"]
+        },
+        "indv4": {
+            "name": "Vínculos Artesanales - Pulseras de Amor/Amistad",
+            "price": 2100,
+            "includes": "Juego de 2 pulseras con significados a elección",
+            "description": "Fortalece tus vínculos con estas pulseras artesanales que simbolizan amor y amistad.",
+            "id": "in4",
+            "image": [
+                "./img/productos/pulseras de la amistad.jpg", 
+                "./img/productos/opciones pulseras.jpg"
+            ],
+            "opciones": true,
+            "opcionesDisponibles":["Ojo truco", "Pride", "Love you código morse", "Infinito", "Corazones unidos", "Corazón"]
+        }
+    }
+  
 }

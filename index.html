@@ -8,14 +8,20 @@
    <meta name="author" content="Abril Rodriguez">
    <meta name="description"
       content="Descubre regalos elegantes y artesanales en Serindipity. Encuentra kits de bienestar, perfumería de lujo y más para sorprender a tus seres queridos o darte un capricho.">
+   
+      <!-- fonts -->
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link
       href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Nanum+Gothic&family=Nanum+Myeongjo&display=swap"
       rel="stylesheet">
+      <!-- favicon -->
    <link rel="icon" href="./img/S.png" type="image/png">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+      <!-- icons googlefonts -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <!-- bootstrap -->
+   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"> -->
       
    <title>Serendipity</title>
 </head>
@@ -24,57 +30,82 @@
    <header>
       <section class="top-left">
          <div class="logo">
-            <img src="./img/Serindi__1_-removebg-preview.png" alt="logo Serindipity">
+            <img src="./img/serendipity white.png" alt="logo Serindipity">
          </div>
-         <div class="navbar">
+         <div class="navbar dropdown">
             <nav>
                <ul>
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Productos</a></li>
+                  <li><a href="#">Nosotros</a></li>
                   <li><a href="#">Contacto</a></li>
                </ul>
             </nav>
          </div>
-         <span><i class="fa-solid fa-cart-shopping"></i></span>
-         <div class="dropdown">
+         <div class="icons">
+            <i class="fa-solid fa-bars"></i>
+            <span class="material-symbols-outlined">shopping_cart</span>
+         </div>
+         <!-- <div class="">
             <ul>
                <li><a class="dropdown-item" href="#">Home</a></li>
                <li><a class="dropdown-item" href="#">Productos</a></li>
                <li><a class="dropdown-item" href="#">Contacto</a></li>
             </ul>
-         </div>
+         </div> -->
       </section>
       <section class="banner">
-         <h1>Serindipity</h1>
-         <h2>Un toque de encanto en cada regalo</h2>
+         <h1>Serendipity</h1>
+         <h2 class="subtitle">Un toque de encanto en cada regalo</h2>
       </section>
    </header>
 
    <main>
-      
+      <section class="productos-destacados"></section>
+      <section class="about">
+         <h2>¿Qué es Serendipity ?</h2>
+         <div class="about-container">
+            <div class="contenido">
+            <h3>Nuestra Historia</h3>
+            <p>Serendipity nació de la pasión por la belleza y la artesanía. Fundada en 2021, nuestra tienda se ha convertido en un oasis de elegancia y bienestar. Desde nuestros inicios, nos hemos dedicado a curar cuidadosamente una colección de productos que reflejen la belleza natural y la calidad artesanal. Cada artículo que ofrecemos ha sido seleccionado con amor y atención a los detalles para brindarte una experiencia única de descubrimiento y serenidad.</p>
+          </div>
+        
+          <div class="contenido">
+            <h3>Nuestra Misión</h3>
+            <p>En Serendipity, nos esforzamos por ofrecer productos de la más alta calidad que promuevan la relajación, la belleza y la conexión con uno mismo. Nuestra misión es inspirar momentos de bienestar y autocomplacencia a través de una cuidadosa selección de productos semiar­tesanales. Creemos en la importancia de crear espacios y momentos de tranquilidad en la vida cotidiana. Trabajamos incansablemente para brindarte productos que te ayuden a encontrar la serenidad en medio del ajetreo y el bullicio de la vida moderna.</p>
+          </div>
+        
+          <div class="contenido">
+            <h3>Nuestro Equipo</h3>
+            <p>Conoce al equipo detrás de Serendipity, apasionados por crear experiencias únicas para nuestros clientes. Estamos comprometidos con tu satisfacción y bienestar. Cada miembro de nuestro equipo comparte una profunda admiración por la belleza y la artesanía, y trabajamos juntos para traerte productos que reflejen esa pasión. Estamos aquí para atender tus necesidades y proporcionarte la atención personalizada que te mereces. Gracias por ser parte de la comunidad Serendipity.</p>
+          </div>
+         </div>
+       </section>
+       
    </main>
 
    <footer>
       <div class="logo">
-         <img src="./img/Serindi (1).png" alt="logo Serindipity">
+         <img src="./img/serendipity white.png" alt="logo Serindipity">
       </div>
+
       <div class="contact">
-         <h4>Contacto</h4>
+         <h4>¿Quieres recibir ofertas exclusivas? ¡Suscríbase!</h4>
          <form action="https://formsubmit.co/rodriguezabbril9@gmail.com" method="POST">
-            <label for="mensaje">Escríbanos</label>
-            <input type="text" name="mensaje" placeholder="Consulte aquí" id="mensaje" maxlength="200">
+            <input type="email" name="email" placeholder="Escriba aquí su correo" id="email maxlength="200">
+            <button type="submit" class="subscribe btn">Suscribirme</button>
          </form>
       </div>
+
       <div class="social-media">
-         <span><i class="fa-brands fa-instagram"></i> instagram </span>
-         <span><i class="fa-brands fa-youtube"></i> youtube</span>
-         <span><i class="fa-brands fa-facebook"></i> facebook</span>
-         <span><i class="fa-brands fa-whatsapp"></i> whatsapp</span>
+         <i class="fa-brands fa-instagram"></i>
+         <i class="fa-brands fa-youtube"></i>
+         <i class="fa-brands fa-facebook"></i>
+         <i class="fa-brands fa-whatsapp"></i>
       </div>
-      <hr>
    </footer>
    <script src="./script.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> -->
    <script src="https://kit.fontawesome.com/77d64e6775.js" crossorigin="anonymous"></script>
 </body>
 
