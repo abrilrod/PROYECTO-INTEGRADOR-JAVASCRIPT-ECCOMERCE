@@ -44,22 +44,69 @@ header {
     background-size: 100% 160px;
 }
 
-header .top-left {
+header .top {
     display: flex;
     align-items: center;
     justify-content:space-between;
+    padding: 0.5rem 2rem;
 }
 
-.logo img {
+.logo {
     width: 5rem;
+    transition: transform 0.3s ease;
 }
 
-.navbar {
+.logo:hover {
+    transform: scale(1.2);
+}
+
+.navbar .menu {
     display: none;
 }
+/* siguiendo el video  */
 
-nav {
-    display: flex;
+.navbar {
+    height: 0;
+    /* height: 500px; */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background-color: aqua;
+    transition-duration: var(--transition-timing);
+    overflow: hidden;
+}
+
+.navbar.active {
+    height: 500px;
+}
+
+.navbar .menu {
+    display: block;
+    width: fit-content;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.navbar.active .menu{
+    opacity: 1;
+}
+
+.navbar .menu li a {
+    margin-bottom: 12px;
+
+}
+
+.icons .hamburger {
+    display: block;
+}
+
+.navbar .menu li a:hover {
+    color: var(--black);
+    transition: 0.5s;
 }
 
 .icons {
@@ -163,17 +210,19 @@ form .subscribe {
     font-family: var(--fuente-texto-sans-serif);
     border: 1px solid rgba(14,14,14,.1803921569);
     cursor: pointer;
-    transition: border 200ms ease-out,color 200ms ease-out;
+    transition: background-color 0.3s ease;
     outline: none;
     background: none;
     border-left: 0;
     width: 90%;
+    padding: 9px 18px 9px 12px;
 }
 
-form .subscribe:hover, form .subscribe:active{
+form .subscribe:hover, form .subscribe:active  {
     background-color: var(--black);
     color: var(--white);
 }
+   
 
 /* responsive mobile first */
 
@@ -207,6 +256,37 @@ form .subscribe:hover, form .subscribe:active{
         background-size: 100%;
     }
 
+    .left {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 0 1.25rem;
+    }
+
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .navbar .menu li a {
+        display: block;
+        color: var(--white);
+        padding: 0 .25rem;
+        font-family: var(--fuente-texto-sans-serif);
+        font-size: 0.8rem;
+    }
+
+    .navbar .menu li a.active {
+        color: var(--black);
+        transition: 0.5s;
+    }
+
+    .icons .hamburger {
+        display: none;
+    }
+
     .banner {
         margin-top: 2rem;
     }
@@ -235,6 +315,17 @@ form .subscribe:hover, form .subscribe:active{
 
     .banner h2 {
         font-size: 1.5rem;
+    }
+
+    .navbar .menu {
+        display: flex;
+        flex-direction: row;
+        opacity: 1;
+        overflow: visible;
+    }
+
+    .icons .hamburger {
+        display: none;
     }
 
     .about {
