@@ -20,16 +20,23 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log(productDetails);
 
             productDetails.innerHTML += `
-                <img src="${box.image}"
-                <h2>${box.name}</h2>
-                <p>${box.description}</p>
-                <span>Precio: $${box.price}</span>
-                <span>Puntuación:<i class="fa-solid fa-star"></i> ${box.puntuacion}</span>
-                <button>Agregar al carrito <span class="material-symbols-outlined">shopping_cart</span></button>
-                <button><a href="./index.html#home">Volver</a></button>`;
+                <img src="${box.image}">
+                <div class="detail-content">
+                    <h2>${box.name}</h2>
+                    <span>Puntuación: <i class="fa-solid fa-star"></i> ${box.puntuacion}</span>
+                    <h3>Descripción del producto</h3><p>${box.description}</p>
+                    <p>Incluye: ${box.includes}</p>
+                    <span>$${box.price}</span>
+                    <button>Agregar al carrito <span class="material-symbols-outlined">shopping_cart</span></button>
+                    <button><a href="./index.html#home">Volver</a></button>
+                </div>
+                
+                `;
 
+            } else if (box.hasOwnProperty('id') && box.id != productId){
+                console.log("El producto no corresponde al ID a buscar");
             } else {
-            console.error("Producto no encontrado");
+                console.error("Producto no encontrado");
             }
         }
 

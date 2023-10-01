@@ -274,11 +274,7 @@ form .subscribe:hover, form .subscribe:active  {
     background-color: var(--brown);
     margin: .25rem;
     transition: background-color 0.3s ease;
-}
-
-.box .box-content .footer-box .btn button a {
     color: var(--white);
-    cursor: pointer;
 }
 
 .box .box-content .footer-box button:hover {
@@ -291,6 +287,31 @@ form .subscribe:hover, form .subscribe:active  {
 
 .box .fa-star {
     color: gold;
+}
+
+/* product detail dinamico */
+
+#product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#product-details img {
+    height: 25rem;
+    width: fit-content;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.detail-content {
+    text-align: left;
+}
+
+.detail-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 /* responsive mobile first */
