@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                         <span><i class="fa-solid fa-star"></i> ${producto.puntuacion}</span>
                                     </div>
                                     <div class="btn">
-                                    <button class="details-button" id="${producto.id}">Ver detalles</button>
+                                        <button class="details-button" id="${producto.id}">Ver detalles</button>
                                         <button><span class="material-symbols-outlined">shopping_cart</span></button>
                                     </div>
                             
@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
 
             productosSection.innerHTML = html;
-
 
             // ver detalles de cada producto 
 
