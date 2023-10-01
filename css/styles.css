@@ -28,11 +28,11 @@ a {
 
 li { list-style: none; }
 
-h1, h3, h5 {
+h1, h3, h5, h2 {
     font-family: var(--fuente-titulos-serif);
 }
 
-h2, p, span, input::placeholder, h4 {
+p, span, input::placeholder, h4 {
     font-family: var(--fuente-texto-sans-serif);
 }
 
@@ -60,22 +60,8 @@ header .top {
     transform: scale(1.2);
 }
 
-.navbar .menu {
-    display: none;
-}
-/* siguiendo el video  */
-
 .navbar {
-    height: 0;
-    /* height: 500px; */
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    background-color: aqua;
     transition-duration: var(--transition-timing);
-    overflow: hidden;
 }
 
 .navbar.active {
@@ -109,14 +95,14 @@ header .top {
     transition: 0.5s;
 }
 
-.icons {
+.material-symbols-outlined {
     display: flex;
+    align-items: center;
     cursor: pointer;
     color: #ffffff;
-    align-items: center;
 }
 
-.icons i, .icons span {
+.right span {
     padding: 0 .5rem;
 }
 
@@ -143,17 +129,16 @@ header .top {
 }
 
 .about h2 {
-    font-family: var(--fuente-titulos-serif);
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .about .contenido {
-    padding: 1rem 1.5rem;
+    padding: 1rem 2rem;
 }
 
 .about .contenido h3 {
     padding-bottom: 1rem;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 /* footer */
@@ -206,7 +191,6 @@ form .subscribe {
     height: 2rem;
     text-align: center;
     margin: auto;
-    transition: var(--transition-timing);
     font-family: var(--fuente-texto-sans-serif);
     border: 1px solid rgba(14,14,14,.1803921569);
     cursor: pointer;
@@ -223,6 +207,87 @@ form .subscribe:hover, form .subscribe:active  {
     color: var(--white);
 }
    
+
+/* estilos elementos dinámicos */
+
+#productos-destacados-content {
+    background-color: var(--white);
+    height: auto;
+    justify-content: space-evenly;
+    align-items: stretch;
+    justify-items: center;
+    align-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: .5rem;
+    margin: .5rem;
+    padding-bottom: 1rem;
+}
+
+#productos-destacados h2 {
+    color: var(--black);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.box {
+    display: flex;
+    border-radius: .5rem;
+    justify-content: center;
+    padding: .5rem;
+    text-align: center;
+    border: solid .75px rgba(194, 194, 194, 0.8);
+    width: auto;
+}
+
+.box .box-content .header-box img {
+    height: 10.75rem;
+    cursor: pointer;
+    border-radius: 1.25rem;
+}
+
+.box h3 {
+    font-family: var(--fuente-titulos-serif);
+    margin: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.box p {
+    font-size: .75rem;
+}
+
+.box .box-content .footer-box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box .box-content .footer-box .btn button {
+    border-radius: 24px;
+    height: 1.5rem;
+    padding: 0 1rem;
+    border: none;
+    background-color: var(--brown);
+    margin: .25rem;
+    transition: background-color 0.3s ease;
+    color: var(--white);
+}
+
+.box .box-content .footer-box button:hover {
+    background-color: var(--beige);
+}
+
+.box .price-punt {
+    cursor: pointer;
+}
+
+.box .fa-star {
+    color: gold;
+}
 
 /* responsive mobile first */
 
@@ -247,6 +312,7 @@ form .subscribe:hover, form .subscribe:active  {
     form .subscribe {
         width: 50%;
     }
+
 }
 
     /* 768px */
@@ -297,6 +363,11 @@ form .subscribe:hover, form .subscribe:active  {
         font-weight: 500;
     }
 
+    /* elementos dinámicos */
+
+    .box {
+        width: 20rem;
+    }
 }
 
 @media screen and (min-width:1100px) {
@@ -334,5 +405,14 @@ form .subscribe:hover, form .subscribe:active  {
 
     .about-container {
         display: flex;
+    }
+
+    #productos-destacados-content {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 1rem;
+    }
+    
+    #productos-destacados h2 {
+        padding-top: 1rem;
     }
 }
