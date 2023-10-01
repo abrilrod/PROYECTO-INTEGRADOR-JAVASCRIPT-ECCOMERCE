@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(productosSection)
 
     // FETCH y JSON 
-    function cargarProductosDestacados() {
         fetch("./products.json")
             .then(function(response){
                 return response.json();
@@ -12,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             .then(function(productosData) {
                 console.log(productosData.boxesPrincip);
-                console.log(productosData.productosIndiv);
+
 
                 let boxes = productosData.boxesPrincip;
                 let html = "";
@@ -36,17 +35,16 @@ document.addEventListener("DOMContentLoaded", function() {
                                         <span><i class="fa-solid fa-star"></i> ${producto.puntuacion}</span>
                                     </div>
                                     <div class="btn">
-                                        <button class="details-button" data-product-id="${producto.id}">Ver detalles</button>
+                                    <button class="details-button" id="${producto.id}">Ver detalles</button>
                                         <button><span class="material-symbols-outlined">shopping_cart</span></button>
                                     </div>
                             
                                 </div>
                             </div>
                         </div>`
-                    
-                        boxesArray.push(boxes[key]);
                     }
                 }
+
             productosSection.innerHTML = html;
 
 
@@ -57,14 +55,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
             detailsBtn.forEach(function(button) {
                 button.addEventListener("click", function(event) {
-                    const productId = event.target.getAttribute('data-product-id');
+                    const productId = event.target.getAttribute("id");
                     window.location.href = `product.html?id=${productId}`;
                 });
             })
             console.log(detailsBtn)
 
             // JSON en el localStorage 
-            localStorage.setItem("productos-destacados", JSON.stringify(boxesArray));
+            localStorage.setItem("productos-destacados", JSON.stringify(boxes));
 
             // comprobación
             console.log("Todo ejecutado con éxito")
@@ -72,7 +70,4 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(function(error) {
                 console.error(error);
             });
-    }
-
-    cargarProductosDestacados()
 });

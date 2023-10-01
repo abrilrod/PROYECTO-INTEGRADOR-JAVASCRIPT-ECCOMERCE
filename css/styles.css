@@ -274,7 +274,11 @@ form .subscribe:hover, form .subscribe:active  {
     background-color: var(--brown);
     margin: .25rem;
     transition: background-color 0.3s ease;
+}
+
+.box .box-content .footer-box .btn button a {
     color: var(--white);
+    cursor: pointer;
 }
 
 .box .box-content .footer-box button:hover {
