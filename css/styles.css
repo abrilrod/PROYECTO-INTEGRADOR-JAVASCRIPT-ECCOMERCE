@@ -38,17 +38,12 @@ p, span, input::placeholder, h4 {
 
 /* header */
 
-header {
-    background-image: url("/img/encabezado.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 160px;
-}
-
 header .top {
     display: flex;
     align-items: center;
     justify-content:space-between;
     padding: 0.5rem 2rem;
+    background-color: var(--beige);
 }
 
 .logo {
@@ -60,39 +55,46 @@ header .top {
     transform: scale(1.2);
 }
 
+.right {
+    padding: 0 1rem;
+}
+
+    /* navbar */
+
 .navbar {
-    transition-duration: var(--transition-timing);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
-.navbar.active {
-    height: 500px;
+.navbar .dropdown .btn {
+    background-color: none;
+    color: var(--white);
 }
 
-.navbar .menu {
-    display: block;
+.navbar .dropdown .btn:hover {
+    color: rgb(70, 70, 70);
+    transition: 0.5s;
+}
+
+.navbar .dropdown .btn:focus, .navbar .dropdown .btn:active, .btn.show, .btn:first-child:active {
+    border: none;
+}
+
+.dropdown-menu {
+    border: solid .75px rgba(194, 194, 194, 0.8);
     width: fit-content;
-    margin: 80px auto 0 auto;
-    text-align: center;
-    transition: 0.5s;
-    opacity: 0;
+    border-radius: .5rem;
+    box-shadow: -10px 10px 24px -5px rgba(0,0,0,0.38);
 }
 
-.navbar.active .menu{
-    opacity: 1;
+.dropdown-item:hover {
+    transition: 0.2s;
 }
 
-.navbar .menu li a {
-    margin-bottom: 12px;
-
-}
-
-.icons .hamburger {
-    display: block;
-}
-
-.navbar .menu li a:hover {
-    color: var(--black);
-    transition: 0.5s;
+.dropdown-item:active {
+    background-color: rgba(209, 209, 209, 0.791);
 }
 
 .material-symbols-outlined {
@@ -102,18 +104,23 @@ header .top {
     color: #ffffff;
 }
 
-.right span {
-    padding: 0 .5rem;
-}
-
 .banner {
     text-align: center;
     color: var(--white);
-    padding: 2.2rem;
+    background-image: url("/img/encabezado.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 160px;
 }
 
 .banner h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.banner h2 {
+    font-family: var(--fuente-texto-sans-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
 }
 
 .subtitle {
@@ -130,6 +137,7 @@ header .top {
 
 .about h2 {
     font-size: 2rem;
+    font-weight: 600;
 }
 
 .about .contenido {
@@ -210,36 +218,21 @@ form .subscribe:hover, form .subscribe:active  {
 
 /* estilos elementos dinámicos */
 
-#productos-destacados-content {
-    background-color: var(--white);
-    height: auto;
-    justify-content: space-evenly;
-    align-items: stretch;
-    justify-items: center;
-    align-content: space-around;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-    grid-gap: .5rem;
-    margin: .5rem;
-    padding-bottom: 1rem;
-}
-
 #productos-destacados h2 {
     color: var(--black);
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 .box {
-    display: flex;
     border-radius: .5rem;
     justify-content: center;
     padding: .5rem;
     text-align: center;
     border: solid .75px rgba(194, 194, 194, 0.8);
-    width: auto;
+    margin: 1rem;
 }
 
 .box .box-content .header-box img {
@@ -266,7 +259,7 @@ form .subscribe:hover, form .subscribe:active  {
     justify-content: center;
 }
 
-.box .box-content .footer-box .btn button {
+.box .box-content .footer-box .btn button, .detail-content button {
     border-radius: 24px;
     height: 1.5rem;
     padding: 0 1rem;
@@ -277,7 +270,7 @@ form .subscribe:hover, form .subscribe:active  {
     color: var(--white);
 }
 
-.box .box-content .footer-box button:hover {
+.box .box-content .footer-box button:hover, .detail-content button:hover {
     background-color: var(--beige);
 }
 
@@ -285,7 +278,7 @@ form .subscribe:hover, form .subscribe:active  {
     cursor: pointer;
 }
 
-.box .fa-star {
+.box .fa-star, .detail-content .fa-star {
     color: gold;
 }
 
@@ -295,14 +288,14 @@ form .subscribe:hover, form .subscribe:active  {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 #product-details img {
     height: 25rem;
     width: fit-content;
-    padding: 1rem;
-    margin: 1rem;
+    padding-bottom: 1rem;
 }
 
 .detail-content {
@@ -314,15 +307,68 @@ form .subscribe:hover, form .subscribe:active  {
     font-weight: 600;
 }
 
+.detail-content span {
+    display: inline-block;
+    font-size: 1.25rem;
+}
+
+.detail-content p {
+    font-size: 1rem;
+}
+
+.detail-content button a {
+    color: var(--white);
+}
+
 /* responsive mobile first */
 
     /* 320px */
 
 @media screen and (min-width:320px) {
+    .box {
+        display: flex;
+        border-radius: .5rem;
+        justify-content: center;
+        padding: .5rem;
+        text-align: center;
+        border: solid .75px rgba(194, 194, 194, 0.8);
+        margin: 3rem;
+        width: auto;
+    }
 
+    .banner {
+        margin: 0 !important;
+        padding: 3rem 0;
+    }
 }
 
 @media screen and (min-width:550px) {
+
+    #productos-destacados-content {
+        background-color: var(--white);
+        height: auto;
+        justify-content: space-evenly;
+        align-items: stretch;
+        justify-items: center;
+        align-content: space-around;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        grid-gap: .5rem;
+        margin: 0 1rem;
+        padding-bottom: 1rem;
+    }
+
+    .banner {
+        text-align: center;
+        color: var(--white);
+        background-repeat: no-repeat;
+        background-size: 100% 300px;
+        padding: 2.5rem 0;
+    }
+
+    .banner h1 {
+        padding-top: 1rem;
+    } 
 
     footer {
         display: flex;
@@ -336,6 +382,19 @@ form .subscribe:hover, form .subscribe:active  {
 
     form .subscribe {
         width: 50%;
+    }
+
+    #product-details {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    #product-details img {
+        height: 20rem;
+        width: fit-content;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
     }
 
 }
@@ -379,7 +438,7 @@ form .subscribe:hover, form .subscribe:active  {
     }
 
     .banner {
-        margin-top: 2rem;
+        padding-top: 6rem;
     }
 
     .subtitle {
@@ -393,6 +452,14 @@ form .subscribe:hover, form .subscribe:active  {
     .box {
         width: 20rem;
     }
+
+    #product-details {
+        margin: 4rem;
+    }
+
+    #product-details img {
+        height: 25rem;
+    }
 }
 
 @media screen and (min-width:1100px) {
@@ -402,7 +469,9 @@ form .subscribe:hover, form .subscribe:active  {
     }
 
     .banner {
-        margin-top: 6.5rem;
+        background-size: 100% 35rem;
+        height: 35rem;
+        padding-top: 20rem;
     }
 
     .banner h1 {
@@ -432,6 +501,10 @@ form .subscribe:hover, form .subscribe:active  {
         display: flex;
     }
 
+    #productos-destacados {
+        margin-top: 1rem;
+    }
+
     #productos-destacados-content {
         grid-template-columns: repeat(4, 1fr);
         padding: 1rem;
@@ -439,5 +512,9 @@ form .subscribe:hover, form .subscribe:active  {
     
     #productos-destacados h2 {
         padding-top: 1rem;
+    }
+
+    #product-details {
+        margin: 4rem 10rem;
     }
 }

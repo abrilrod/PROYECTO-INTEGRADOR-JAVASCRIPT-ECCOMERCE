@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                 <div class="footer-box">
                                     <div class="price-punt">
                                         <span>$${producto.price}</span>
-                                        <span><i class="fa-solid fa-star"></i> ${producto.puntuacion}</span>
+                                        <span><i class="fa-solid fa-star"></i> ${producto.puntuacion.toFixed(2)}</span>
                                     </div>
                                     <div class="btn">
                                         <button class="details-button" id="${producto.id}">Ver detalles</button>

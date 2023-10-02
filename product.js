@@ -22,15 +22,18 @@ document.addEventListener("DOMContentLoaded", function() {
             productDetails.innerHTML += `
                 <img src="${box.image}">
                 <div class="detail-content">
-                    <h2>${box.name}</h2>
-                    <span>Puntuación: <i class="fa-solid fa-star"></i> ${box.puntuacion}</span>
-                    <h3>Descripción del producto</h3><p>${box.description}</p>
-                    <p>Incluye: ${box.includes}</p>
-                    <span>$${box.price}</span>
-                    <button>Agregar al carrito <span class="material-symbols-outlined">shopping_cart</span></button>
-                    <button><a href="./index.html#home">Volver</a></button>
+                    <div class="detail-text">
+                        <h2>${box.name}</h2>
+                        <span><i class="fa-solid fa-star"></i> ${box.puntuacion.toFixed(2)}</span>
+                        <p>${box.description}</p>
+                        <p>Incluye: ${box.includes}</p>
+                        <span>$${box.price}</span>
+                    </div>
+                    <div class="btns">
+                        <button>Agregar al carrito</button>
+                        <button><a href="./index.html#home">Volver</a></button>
+                    </div>
                 </div>
-                
                 `;
 
             } else if (box.hasOwnProperty('id') && box.id != productId){
@@ -41,7 +44,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
     }
-    // const box = productosDestacados.find(box => box.id == productId);
             
     // 2° comprobación 
     console.log("Ejecución completada");

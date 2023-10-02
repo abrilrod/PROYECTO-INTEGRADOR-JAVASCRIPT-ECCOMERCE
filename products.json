@@ -8,7 +8,7 @@
             "id": 1,
             "image": "./img/productos/box comfy.jpg",
             "opciones": false,
-            "puntuacion": "4"
+            "puntuacion": 4
         },
     
         "producto2": {
