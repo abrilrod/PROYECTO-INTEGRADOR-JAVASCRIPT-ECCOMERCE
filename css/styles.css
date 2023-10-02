@@ -44,6 +44,16 @@ header .top {
     justify-content:space-between;
     padding: 0.5rem 2rem;
     background-color: var(--beige);
+    position: fixed;
+    width: 100%;
+}
+
+.top-product {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0.5rem 2rem;
+    background-color: var(--beige);
 }
 
 .logo {
@@ -168,6 +178,10 @@ footer div {
     font-size: 0.9rem;
     padding: 0 1rem 1rem 1rem;
     font-weight: 500;
+}
+
+.social-media {
+    cursor: pointer;
 }
 
 form {
@@ -339,7 +353,9 @@ form .subscribe:hover, form .subscribe:active  {
 
     .banner {
         margin: 0 !important;
-        padding: 3rem 0;
+        padding-top: 7rem;
+        padding-bottom: 3rem;
+        background-size: 100% 12.5rem;
     }
 }
 
@@ -364,7 +380,7 @@ form .subscribe:hover, form .subscribe:active  {
         color: var(--white);
         background-repeat: no-repeat;
         background-size: 100% 300px;
-        padding: 2.5rem 0;
+        padding-top: 6rem;
     }
 
     .banner h1 {
